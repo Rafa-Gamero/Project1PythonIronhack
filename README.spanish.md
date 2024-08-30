@@ -8,7 +8,7 @@ Este README está disponible en varios idiomas.
 
 ## Idiomas Disponibles
 
-- [English (Inglés](README.md)
+- [English (Inglés)](README.md)
 - [Español (Spanish)](README.spanish.md)
 
 ### Enlaces del Proyecto
