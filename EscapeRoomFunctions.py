@@ -134,6 +134,7 @@ def linebreak():
     """
     print("\n\n")
 
+# Esta funcion prepara el escenario y luego delega a play_room la lógica específica del juego según el estado actual.
 def start_game(game_state):
     """
     Start the game
@@ -144,6 +145,7 @@ def start_game(game_state):
     print("Me: What's happening?")
     play_room(game_state, game_state["current_room"])
 
+# Esta funcion gestiona las interacciones del jugador dentro de una habitación específica, permitiéndole explorar o examinar elementos, y repite el ciclo de interacción hasta que el jugador alcance la "habitación objetivo" o decida hacer otra cosa.
 def play_room(game_state, room):
     game_state["current_room"] = room
     if room == game_state["target_room"]:
@@ -159,13 +161,17 @@ def play_room(game_state, room):
             print("Not sure what you mean.")
         play_room(game_state, room)
 
+#Esta funcion permite al jugador explorar una habitación específica dentro del juego y describe los objetos que se encuentran en ella.
 def explore_room(room):
     items = ", ".join(i["name"] for i in object_relations[room["name"]])
     print(f"You explore the room. This is {room['name']}. You find {items}")
 
+
+# Esta funcion determina a qué habitación lleva una puerta en función de la habitación en la que el jugador se encuentra actualmente.
 def get_next_room_of_door(door, current_room):
     return next(room for room in object_relations[door["name"]] if room != current_room)
 
+#Esta funcion permite al jugador examinar un objeto específico en la habitación actual y manejar la interacción con dicho objeto, que puede ser una puerta u otro tipo de ítem.
 def examine_item(game_state, item_name):
     current_room, next_room = game_state["current_room"], None
     for item in object_relations[current_room["name"]]:
