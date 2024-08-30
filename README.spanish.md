@@ -3,6 +3,7 @@
 ## Escape Room - Proyecto de Juego en Python por Rafa, Gabriela, Carlos y Ambar
 
 Este proyecto es una modificación de un juego tipo Escape Room basado en texto, desarrollado en Python utilizando un código predefinido. Nuestro equipo ha añadido una nueva función en la que el jugador debe ingresar una palabra secreta para desbloquear una puerta, añadiendo una capa extra de dificultad al juego.  
+
 Este README está disponible en varios idiomas.
 
 ## Idiomas Disponibles
