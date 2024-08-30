@@ -7,8 +7,8 @@ This README is available in multiple languages.
 
 ## Available Languages
 
-- [English]([README.md](https://github.com/PoeMadara/Project1PythonIronhack/edit/main/README.md))
-- [Español (Spanish)]([README.es.md](https://github.com/PoeMadara/Project1PythonIronhack/blob/main/README.spanish.md))
+- [English (Inglés)](README.md)
+- [Español](README.spanish.md)
   
 ### Project Links
 
