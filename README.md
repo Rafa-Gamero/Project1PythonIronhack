@@ -1,53 +1,59 @@
 # Project1PythonIronhack
-En este primer proyecto hemos modificado un juego de tipo Escape room desarrollado en Python a partir de una código predifinido.
-Hemos añadido una opción que es poner una palabra secreta para abrir una puerta, para asi de esta forma hacer el juego un poco mas dificil.
 
-Aqui los diferentes enlaces para acceder al Google Coolab para poder jugar y a la presentación donde explicamos lo que hemos realizado.
+## Escape Room - Python Game Project by Rafa, Gabriela, Carlos and Ambar
 
-https://colab.research.google.com/drive/1ep_6fBqWUJqg92pGSyuYahG9IYR2gLSr?authuser=0#scrollTo=xYWfAtnqcjdE
+This project is a modification of a text-based Escape Room game developed in Python using predefined code. Our team has added a new feature where the player must input a secret word to unlock a door, adding an extra layer of difficulty to the game.
+This README is available in multiple languages.
 
-https://www.canva.com/design/DAGPJmmBt9A/EuDg0ztt-LqI1dTdPGCJSw/view?utm_content=DAGPJmmBt9A&utm_campaign=designshare&utm_medium=link&utm_source=editor
+## Available Languages
 
-Para que el codigo funcione el archivo EscapeRoomFunctions debe estar en una carpeta en llamada Functions en el propio Google drive del usuario.
+- [English (Inglés)](README.md)
+- [Español (Spanish)](README.spanish.md)
+  
+### Project Links
 
-Aqui explico el funcionamiento del juego.
+- **Play on Google Colab:** [Escape Room on Google Colab](https://colab.research.google.com/drive/1ep_6fBqWUJqg92pGSyuYahG9IYR2gLSr?authuser=0#scrollTo=xYWfAtnqcjdE)
+- **Project Presentation:** [Presentation on Canva](https://www.canva.com/design/DAGPJmmBt9A/EuDg0ztt-LqI1dTdPGCJSw/view?utm_content=DAGPJmmBt9A&utm_campaign=designshare&utm_medium=link&utm_source=editor)
 
-Este juego es una aventura interactiva de texto en la que el jugador debe explorar diferentes habitaciones, encontrar llaves y desbloquear puertas para finalmente escapar de la casa. Aquí te explico cómo funciona el juego, paso a paso:
+> **Note:** To ensure the code runs correctly, the file `EscapeRoomFunctions.py` must be placed in a folder named `Functions` within your Google Drive.
 
-Configuración del juego
-Objetos y habitaciones: El juego define varias habitaciones (game_room, bedroom1, bedroom2, livingroom, outside) y objetos como muebles (couch, piano, queenbed, etc.), puertas (door_a, door_b, door_c, door_d) y llaves para algunas puertas (key_a, key_b, key_c).
-Relaciones entre objetos: Las relaciones entre objetos y habitaciones se definen en el diccionario object_relations, que indica qué objetos se encuentran en cada habitación y qué habitaciones están conectadas por cada puerta.
-Inicio del juego
-El juego comienza con la función start_game(game_state), que introduce al jugador en la historia: se despierta en un sofá en una casa extraña y debe encontrar una forma de escapar.
-El juego se inicia llamando a play_room(game_state, game_state["current_room"]), que gestiona la interacción del jugador dentro de la habitación actual.
-Interacción del jugador
-Explorar una habitación: El jugador puede optar por "explorar" la habitación actual, lo que le permite ver los objetos presentes en esa habitación (explore_room(room)).
-Examinar un objeto: El jugador también puede optar por "examinar" un objeto en la habitación. Dependiendo del tipo de objeto, puede encontrar una llave, abrir una puerta o descubrir que el objeto no tiene nada interesante. Esto se maneja en examine_item(game_state, item_name).
+### Game Description
 
-Puertas y llaves
-Algunas puertas requieren llaves para ser abiertas, y otras pueden requerir que el jugador ingrese una palabra secreta (como en el caso de "door d", que responde a la palabra secreta abracadabra).
-Si el jugador tiene la llave correcta para una puerta, la función examine_item permitirá abrirla y mover al jugador a la siguiente habitación.
+This game is an interactive text-based adventure where the player must explore different rooms, find keys, and unlock doors to eventually escape the house. Here's how the game works:
 
-Progreso y finalización del juego
-El jugador progresa de una habitación a otra resolviendo los desafíos de encontrar llaves y abrir puertas.
-El objetivo final es alcanzar la "habitación objetivo", que en este caso es outside, lo que significa que el jugador ha escapado de la casa y ganado el juego.
+#### 1. **Game Setup**
 
-Lógica principal
-start_game(game_state): Introduce la historia y comienza la interacción.
-play_room(game_state, room): Maneja la interacción en la habitación actual y repite el ciclo hasta que el jugador escape o decida detenerse.
-explore_room(room): Permite al jugador ver qué objetos hay en la habitación.
-examine_item(game_state, item_name): Permite al jugador interactuar con los objetos, abrir puertas y encontrar llaves.
-get_next_room_of_door(door, current_room): Determina la habitación a la que lleva una puerta.
+- **Objects and Rooms:** The game defines several rooms (`game_room`, `bedroom1`, `bedroom2`, `livingroom`, `outside`) and objects like furniture (`couch`, `piano`, `queenbed`, etc.), doors (`door_a`, `door_b`, `door_c`, `door_d`), and keys for some doors (`key_a`, `key_b`, `key_c`).
+- **Object Relationships:** The relationships between objects and rooms are defined in the `object_relations` dictionary, which indicates what objects are in each room and which rooms are connected by each door.
 
-Ejemplo de Jugabilidad
-El jugador se despierta en game_room y explora la habitación, descubriendo un piano y una door a.
-Si examina el piano, encuentra la key for door a.
-Luego, examina door a, usa la llave y pasa a bedroom1.
-El jugador continúa explorando y encontrando llaves hasta que finalmente abre door d con la palabra secreta y escapa a outside, ganando el juego.
-El juego es un sencillo "escape room" basado en texto donde el jugador resuelve pequeños acertijos y explora para encontrar una salida.
+#### 2. **Starting the Game**
 
+The game begins with the `start_game(game_state)` function, which introduces the player to the story: they wake up on a couch in a strange house and must find a way to escape. The game proceeds by calling `play_room(game_state, game_state["current_room"])`, which manages the player's interactions within the current room.
 
+#### 3. **Player Interaction**
 
+- **Explore a Room:** The player can choose to "explore" the current room, allowing them to see the objects present in that room (`explore_room(room)`).
+- **Examine an Object:** The player can also choose to "examine" an object in the room. Depending on the type of object, they may find a key, unlock a door, or discover that the object has nothing interesting. This is handled in `examine_item(game_state, item_name)`.
+
+#### 4. **Doors and Keys**
+
+Some doors require keys to be opened, while others may require the player to input a secret word (such as "door d," which responds to the secret word `abracadabra`). If the player has the correct key for a door, the `examine_item` function will allow them to open it and move to the next room.
+
+#### 5. **Game Progression and Completion**
+
+The player progresses from one room to another by solving challenges to find keys and unlock doors. The ultimate goal is to reach the "target room," which in this case is `outside`, meaning the player has successfully escaped the house and won the game.
+
+### Main Logic
+
+- **`start_game(game_state)`:** Introduces the story and starts the interaction.
+- **`play_room(game_state, room)`:** Manages interaction in the current room and repeats the cycle until the player escapes or decides to stop.
+- **`explore_room(room)`:** Allows the player to see what objects are in the room.
+- **`examine_item(game_state, item_name)`:** Enables the player to interact with objects, unlock doors, and find keys.
+- **`get_next_room_of_door(door, current_room)`:** Determines which room a door leads to.
+
+### Gameplay Example
+
+The player wakes up in `game_room` and explores the room, discovering a piano and `door_a`. If they examine the piano, they find the `key_for_door_a`. Then, they examine `door_a`, use the key, and proceed to `bedroom1`. The player continues exploring and finding keys until they eventually open `door_d` with the secret word and escape to `outside`, winning the game.
 
 
 
