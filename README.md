@@ -3,7 +3,13 @@
 ## Escape Room - Python Game Project by Rafa, Gabriela, Carlos and Ambar
 
 This project is a modification of a text-based Escape Room game developed in Python using predefined code. Our team has added a new feature where the player must input a secret word to unlock a door, adding an extra layer of difficulty to the game.
+This README is available in multiple languages.
 
+## Available Languages
+
+- [English]([README.md](https://github.com/PoeMadara/Project1PythonIronhack/edit/main/README.md))
+- [Español (Spanish)]([README.es.md](https://github.com/PoeMadara/Project1PythonIronhack/blob/main/README.spanish.md))
+  
 ### Project Links
 
 - **Play on Google Colab:** [Escape Room on Google Colab](https://colab.research.google.com/drive/1ep_6fBqWUJqg92pGSyuYahG9IYR2gLSr?authuser=0#scrollTo=xYWfAtnqcjdE)
